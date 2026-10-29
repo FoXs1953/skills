@@ -1,0 +1,16 @@
+# Local system files
+.DS_Store
+._*
+
+# Credentials and private runtime data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+cookies.txt
+.court/
+
+# Python cache
+__pycache__/
+*.py[cod]
