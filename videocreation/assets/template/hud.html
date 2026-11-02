@@ -1,0 +1,11 @@
+<!-- Необязательные оверлеи поверх всех сцен (внутри #cam, трясутся вместе с кадром).
+     SPD — круглый прибор (скорость, температура, процент, давление…), управляется speedo() из lib.js;
+     подпись единиц — в #SPD-u. BADGE — бейдж серии/рубрики (badgeAnim()). Ненужное — удалить. -->
+<div class="abs" id="SPD" style="left:46px;top:770px;width:340px;height:283px;transform-origin:170px 170px;visibility:hidden">
+<svg viewBox="0 0 360 300" width="340" height="283"><defs><linearGradient id="gSpdArc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4FD98F"/><stop offset=".5" stop-color="#FFD34D"/><stop offset="1" stop-color="#FF2E4D"/></linearGradient></defs>
+<circle cx="180" cy="180" r="162" fill="rgba(8,10,26,.66)" stroke="rgba(255,255,255,.3)" stroke-width="4"/>
+<path d="M67.4 245 A130 130 0 1 1 292.6 245" stroke="url(#gSpdArc)" stroke-width="16" fill="none" stroke-linecap="round"/>
+<line id="SPD-nd" x1="180" y1="180" x2="180" y2="62" stroke="#fff" stroke-width="9" stroke-linecap="round"/><circle cx="180" cy="180" r="15" fill="#fff"/>
+<text id="SPD-v" x="180" y="252" text-anchor="middle" font-family="Inter Display" font-weight="900" font-size="60" fill="#fff" letter-spacing="-2">0</text>
+<text id="SPD-u" x="180" y="286" text-anchor="middle" font-family="Inter Display" font-weight="800" font-size="24" fill="#9CA6C8">единицы</text></svg></div>
+<div class="chip dark" id="BADGE" style="left:1560px;top:34px;opacity:0;transform-origin:100% 50%;background:rgba(10,12,30,.78);border-color:rgba(255,255,255,.25)"><span class="n" style="background:linear-gradient(135deg,#FF4F8B,#FF9A5B);font-size:22px">#1</span>РУБРИКА</div>

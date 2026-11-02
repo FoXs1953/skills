@@ -1,0 +1,41 @@
+<!-- ===================================================================
+     ШАБЛОН СЦЕН — стартовая точка для ЛЮБОГО видео. Тексты-заглушки
+     заменяются под тему; набор сцен строится по раскадровке.
+     Каждая сцена — <div class="scene" id="..."> на весь кадр.
+     Внутри: .bg (градиентный фон, на 60 px шире кадра — под тряску),
+     <svg class="full"> для персонажей/объектов (заполняется в build()),
+     текст .h с data-t (слова; *слово* = градиент из data-g, | = перенос),
+     .chip / .pill / .glass — плашки. Позиции — абсолютные пиксели.
+     Поля: 110 px по краям (16:9); для 9:16 см. references/style-guide.md.
+     =================================================================== -->
+
+<!-- 1. ХУК: тёмный фон, свечение, слова влетают с ударами -->
+<div class="scene" id="HK">
+  <div class="bg" style="background:radial-gradient(circle at 50% 45%,#1B2257 0%,#090C22 62%,#04050D 100%)"></div>
+  <div class="glow" id="HK-glow" style="left:510px;top:90px;background:radial-gradient(circle,rgba(255,46,77,.55) 0%,rgba(255,46,77,0) 65%)"></div>
+  <div class="h wt ctr" id="HK-1" data-t="*КОРОТКИЙ* *ХУК*" data-g="gs" style="left:960px;top:230px;font-size:200px"></div>
+  <div class="h wt ctr" id="HK-2" data-t="вторая строка хука —|с *главным* *вопросом?*" data-g="go" style="left:960px;top:540px;font-size:88px;line-height:1.1"></div>
+</div>
+
+<!-- 2. ОБЪЯСНЕНИЕ: светлый фон, чип-номер, заголовок, карточка со счётчиком, персонаж, факт-пилюля -->
+<div class="scene" id="EX">
+  <div class="bg" style="background:radial-gradient(circle at 80% 90%,#FFC6DA 0%,#F3E9FF 55%,#E6E0FF 100%)"></div>
+  <svg class="full" viewBox="0 0 1920 1080" id="EX-svg"></svg>
+  <div class="chip" id="EX-chip" style="left:130px;top:120px"><span class="n" style="background:linear-gradient(135deg,#FF4F8B,#FF9A5B)">1</span>Пункт / причина / шаг</div>
+  <div class="h" id="EX-h" data-t="*Заголовок*" data-g="gp" style="left:126px;top:205px;font-size:150px"></div>
+  <div class="glass" id="EX-card" style="left:130px;top:440px;width:640px;height:260px;display:flex;flex-direction:column;justify-content:center;padding-left:44px">
+    <div style="font-weight:900;font-size:110px;letter-spacing:-0.045em;color:#121419;line-height:1"><span id="EX-cnt">0</span><span style="font-size:56px"> %</span></div>
+    <div class="sub" style="position:static;font-size:32px;margin-top:10px">подпись к цифре</div>
+  </div>
+  <div class="pill" id="EX-pill" style="left:820px;top:520px"><span class="pico" style="background:linear-gradient(135deg,#6A4BFF,#2F9BFF)">!</span>Короткий вывод</div>
+</div>
+
+<!-- 3. ФИНАЛ / ПРИЗЫВ: возврат к хуку + переход в профиль -->
+<div class="scene" id="CT">
+  <div class="bg" style="background:radial-gradient(circle at 50% 40%,#1B2257 0%,#090C22 62%,#04050D 100%)"></div>
+  <div class="h wt ctr" id="CT-t" data-t="Финальная|*мысль*" data-g="gr" style="left:960px;top:110px;font-size:170px;line-height:1.02"></div>
+  <div class="abs" id="CT-card" style="left:0;top:0;width:1920px;height:1080px">
+    <div class="h wt ctr" style="left:960px;top:500px;font-size:96px"><span class="gs">Следующее видео</span> → в профиле</div>
+    <div class="h wt ctr" style="left:960px;top:700px;font-size:52px;color:#C9D2F2">Вопрос зрителю? <span class="go">Пиши в комментариях</span></div>
+  </div>
+</div>

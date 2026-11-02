@@ -1,0 +1,33 @@
+/* videocreation · base.css — кадр W×H (по умолчанию 1920×1080; build_page.py --size задаёт --W/--H), типографика, градиенты слов, чипы, пилюли, стекло */
+:root{--W:1920px;--H:1080px}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:var(--W);height:var(--H);overflow:hidden;background:#05070F}
+body{font-family:'Inter Display','Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+#stage{position:absolute;left:0;top:0;width:var(--W);height:var(--H);overflow:hidden;background:#05070F}
+#cam{position:absolute;left:0;top:0;width:var(--W);height:var(--H);transform-origin:50% 50%}
+.scene{position:absolute;left:0;top:0;width:var(--W);height:var(--H);overflow:hidden;display:none}
+.bg{position:absolute;left:-60px;top:-60px;width:calc(var(--W) + 120px);height:calc(var(--H) + 120px)}
+.full{position:absolute;left:0;top:0;width:var(--W);height:var(--H);overflow:visible}
+.abs{position:absolute}
+.h{position:absolute;font-weight:900;letter-spacing:-0.045em;line-height:1.0;white-space:nowrap;color:#111318}
+.wt{color:#fff}
+.w{display:inline-block;white-space:pre}
+.ctr{translate:-50% 0;text-align:center}
+.ctrc{translate:-50% -50%}
+.gp,.gb,.go,.gv,.gr,.gg,.gs{-webkit-background-clip:text;background-clip:text;color:transparent;padding:.14em .06em .2em;margin:-.14em -.06em -.2em}
+.gp{background-image:linear-gradient(100deg,#FF3F84 0%,#FF8A4C 100%)}
+.gb{background-image:linear-gradient(100deg,#2A6BFF 0%,#4FC0FF 100%)}
+.go{background-image:linear-gradient(100deg,#FF8A2B 0%,#FFB93D 100%)}
+.gv{background-image:linear-gradient(100deg,#6A4BFF 0%,#2F9BFF 100%)}
+.gr{background-image:linear-gradient(100deg,#FF2E4D 0%,#FF7A3D 100%)}
+.gg{background-image:linear-gradient(100deg,#10B86B 0%,#4FD98F 100%)}
+.gs{background-image:linear-gradient(100deg,#2F7BFF 0%,#A86BFF 50%,#FF4F8B 100%)}
+.sub{position:absolute;font-weight:700;font-size:38px;letter-spacing:-0.015em;color:#5B6274;white-space:nowrap}
+.chip{position:absolute;display:flex;align-items:center;gap:16px;padding:10px 30px 10px 10px;border-radius:999px;background:rgba(255,255,255,.72);border:2px solid rgba(255,255,255,.95);box-shadow:0 14px 44px rgba(20,30,70,.14);font-weight:800;font-size:32px;letter-spacing:-0.015em;color:#121419;white-space:nowrap}
+.chip .n{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;font-size:28px}
+.chip.dark{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff;box-shadow:none}
+.glass{position:absolute;background:rgba(255,255,255,.6);border:2px solid rgba(255,255,255,.95);border-radius:44px;box-shadow:0 34px 90px rgba(40,50,100,.14),inset 0 1px 0 #fff}
+.pill{position:absolute;display:flex;align-items:center;gap:14px;padding:14px 32px 14px 16px;border-radius:999px;background:rgba(255,255,255,.86);border:2px solid #fff;box-shadow:0 16px 44px rgba(40,50,90,.16);font-weight:800;font-size:36px;letter-spacing:-0.015em;color:#121419;white-space:nowrap}
+.pico{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;font-size:28px}
+.glow{position:absolute;width:900px;height:900px;border-radius:50%}
